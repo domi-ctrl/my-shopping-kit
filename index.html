@@ -45,6 +45,10 @@
             align-items: center;
             font-size: 2em;
         }
+        iframe {
+            border: none;
+            border-radius: 15px;
+        }
         .buttons {
             text-align: center;
             margin-top: 20px;
@@ -76,20 +80,17 @@
         </div>
         <!-- Buttons -->
         <div class="buttons">
-            <button onclick="showVideo('https://drive.google.com/uc?export=download&id=1RbtfgsrM6eUGa1Qp2jOcH8oakwYNWWZs')">Easy</button>
-            <button onclick="showVideo('https://drive.google.com/uc?export=download&id=1XC7c9rLdCrYIFaxKMmWoKdY2LY-LoeMJ')">Medium</button>
-            <button onclick="showVideo('https://drive.google.com/uc?export=download&id=1GNBs2DKY9H4u-G4hrOXgCdFbV6Fu0rbE')">Hard</button>
+            <button onclick="showVideo('https://drive.google.com/file/d/1RbtfgsrM6eUGa1Qp2jOcH8oakwYNWWZs/preview')">Easy</button>
+            <button onclick="showVideo('https://drive.google.com/file/d/1XC7c9rLdCrYIFaxKMmWoKdY2LY-LoeMJ/preview')">Medium</button>
+            <button onclick="showVideo('https://drive.google.com/file/d/1GNBs2DKY9H4u-G4hrOXgCdFbV6Fu0rbE/preview')">Hard</button>
         </div>
     </main>
     <script>
-        // JavaScript function to update the container with a video
+        // JavaScript function to update the container with an iframe
         function showVideo(videoSrc) {
             const container = document.getElementById('video-container');
             container.innerHTML = `
-                <video width="100%" height="100%" controls>
-                    <source src="${videoSrc}" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                <iframe src="${videoSrc}" width="100%" height="100%" allow="autoplay"></iframe>
             `;
         }
     </script>

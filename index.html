@@ -14,13 +14,13 @@
             font-family: 'Mansalva', cursive;
             margin: 0;
             padding: 0;
-            background-color: #FFCFEF;
+            background-color: #EFB6C8;
             color: #333;
         }
         header {
             text-align: center;
             padding: 20px;
-            background-color: #0A97B0;
+            background-color: #8174A0;
             color: white;
         }
         h1 {
@@ -32,24 +32,66 @@
             max-width: 800px;
             margin: 0 auto;
         }
-        footer {
-            text-align: center;
+        .container {
+            margin: 20px 0;
             padding: 10px;
-            background-color: #333;
+            background-color: #fff;
+            border: 2px solid #8174A0;
+            border-radius: 15px;
+            text-align: center;
+            height: 300px; /* Fixed height for the video container */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+        }
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        button {
+            font-family: 'Mansalva', cursive;
+            background-color: #8174A0;
             color: white;
-            font-size: 0.9em;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 70px;
+            font-size: 1.2em;
+        }
+        button:hover {
+            background-color: #604a84;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to My Webpage</h1>
+        <h1>My Shopping Kit</h1>
     </header>
     <main>
-        <p>This is a simple webpage using the Mansalva font. You can customize this template to create your own unique design. The Mansalva font gives your text a stylish, handwritten look!</p>
+        <!-- Video Container -->
+        <div class="container" id="video-container">
+            <p>Pick a mode!</p>
+        </div>
+        <!-- Buttons -->
+        <div class="buttons">
+            <button onclick="showVideo('https://drive.google.com/uc?export=download&id=1RbtfgsrM6eUGa1Qp2jOcH8oakwYNWWZs')">Easy</button>
+            <button onclick="showVideo('https://drive.google.com/uc?export=download&id=1XC7c9rLdCrYIFaxKMmWoKdY2LY-LoeMJ')">Medium</button>
+            <button onclick="showVideo('https://drive.google.com/uc?export=download&id=1GNBs2DKY9H4u-G4hrOXgCdFbV6Fu0rbE')">Hard</button>
+        </div>
     </main>
-    <footer>
-        <p>&copy; 2024 My Webpage. All rights reserved.</p>
-    </footer>
+    <script>
+        // JavaScript function to update the container with a video
+        function showVideo(videoSrc) {
+            const container = document.getElementById('video-container');
+            container.innerHTML = `
+                <video width="100%" height="100%" controls>
+                    <source src="${videoSrc}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            `;
+        }
+    </script>
 </body>
 </html>

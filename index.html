@@ -67,7 +67,12 @@
         button:hover {
             background-color: #604a84;
         }
-        img {max-width: 20px;}
+        img {
+            display: block; /* Makes the image behave like a block-level element */
+            margin: 10px auto; /* Centers the image horizontally */
+            max-width: 500px; /* Optional: Limits the image width */
+            height: auto; /* Ensures the image maintains its aspect ratio */
+        }
     </style>
 </head>
 <body>
@@ -85,7 +90,8 @@
             <button onclick="showVideo('https://drive.google.com/file/d/1XC7c9rLdCrYIFaxKMmWoKdY2LY-LoeMJ/preview')">Medium</button>
             <button onclick="showVideo('https://drive.google.com/file/d/1GNBs2DKY9H4u-G4hrOXgCdFbV6Fu0rbE/preview')">Hard</button>
         </div>
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg0DAGacQEgTw7ya_AAtJZPDhPozdOo3xZ2CYgrwyZmTFxGrc0X9iKcoRdIRt8Kp6fJWJyxlATL1pDV3b-33O39LhCftsx8-p80GVLz7-5PlcNqGYIscKk4nwcihGGlRf8iD_Bi34ED-r4I/s800/zei_shopping_mynumber.png">
+        <!-- Centered Image -->
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg0DAGacQEgTw7ya_AAtJZPDhPozdOo3xZ2CYgrwyZmTFxGrc0X9iKcoRdIRt8Kp6fJWJyxlATL1pDV3b-33O39LhCftsx8-p80GVLz7-5PlcNqGYIscKk4nwcihGGlRf8iD_Bi34ED-r4I/s800/zei_shopping_mynumber.png" alt="Shopping Illustration">
     </main>
     <script>
         // JavaScript function to update the container with an iframe
